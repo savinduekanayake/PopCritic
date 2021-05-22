@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {Helmet} from "react-helmet";
 
-const tmdb_api_key = ""; //Your TMDB API KEY
+const tmdb_api_key = "bd5bc8c3eee4f9fd19f8c9cb07bb4cb9"; //generated TMDB API KEY
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -49,8 +49,8 @@ export default function Search() {
   const [query, setQuery] = useState(0);
 
   useEffect(() => {
-  	var query = window.location.pathname.substring(8);
-  	setQuery(decodeURIComponent(query));
+    var query = window.location.pathname.substring(8);
+    setQuery(decodeURIComponent(query));
     fetch("https://api.themoviedb.org/3/search/movie?api_key="+tmdb_api_key+"&query="+query).then(resp => resp.json()).then((data) => setMovies(data.results));
   },[])
 
