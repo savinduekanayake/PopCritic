@@ -7,6 +7,7 @@ import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {Helmet} from "react-helmet";
+import Link from '@material-ui/core/Link';
 
 const tmdb_api_key = "bd5bc8c3eee4f9fd19f8c9cb07bb4cb9"; //generated TMDB API KEY
 
@@ -54,6 +55,9 @@ export default function Search() {
     fetch("https://api.themoviedb.org/3/search/movie?api_key="+tmdb_api_key+"&query="+query).then(resp => resp.json()).then((data) => setMovies(data.results));
   },[])
 
+
+
+
   return (
   	<div>
   	<Helmet>
@@ -63,11 +67,16 @@ export default function Search() {
   	<CircularProgress style={{ display: movies?"none":"block", margin: "20px auto" }} />
     <List component="nav" className={classes.list} aria-label="mailbox folders">
     { movies?movies.map(x=> (
+      <Link href={ "/movie/" + x.id } color="inherit" style={{ textDecoration: "none" }}> 
       <ListItem button onClick={ () => addMovie(x.id) } key={x.id}>
+         
         <img src={ x.poster_path?("https://image.tmdb.org/t/p/w500"+x.poster_path):"https://via.placeholder.com/400x600" } className={classes.poster} />
+        
         <Typography className={classes.title}>{ x.original_title }</Typography>
         <Typography className={classes.date}>({ x.release_date?x.release_date.split("-")[0]:"" })</Typography>
+        
       </ListItem>
+      </Link>
     )):"" }
     </List>
     </div>

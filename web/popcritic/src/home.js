@@ -84,13 +84,13 @@ export default function Home() {
     <Card className={windowWidth >500? classes.card : classes.cardMobile} key={movie.movie_id}>
         <CardMedia className={classes.media} image={ "https://image.tmdb.org/t/p/w500" + movie.poster } title={ movie.title } />
         <CardContent>
+
           <Link href={ "/movie/" + movie.movie_id } color="inherit" style={{ textDecoration: "none" }}>
           <Typography className={classes.title} gutterBottom variant="h5" component="h2">
           { movie.title}
-          
-          
           </Typography>
           </Link>
+          
           <Typography variant="body2" component="p" className={classes.plot}>
           {  movie.plot.slice(0,70) + "..." }
           </Typography>
