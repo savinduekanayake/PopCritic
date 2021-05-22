@@ -87,6 +87,10 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  titleDev: {
+    flex:1,
+
+  }
 }));
 
 export default function SearchAppBar() {
@@ -110,15 +114,18 @@ export default function SearchAppBar() {
           <Avatar alt="PopCritic" src="/header.png" className={classes.avatar} />
           </Link>
     
-        <Link color="inherit" href="/" underline="none">
+        <dev className={classes.titleDev}>
+        
           <Typography className={classes.title} variant="h6" noWrap>
+          <Link color="inherit" href="/" underline="none">
             PopCritic
+            </Link>
           </Typography>
-          </Link>
-
+          
+          </dev>
 
  
-          <Link href="https://github.com/theabbie/PopCritic">
+          <Link href="https://github.com/savinduekanayake/PopCritic">
             <GitHubIcon fontSize="large" className={classes.gh} />
           </Link>
           <div className={classes.search}>
