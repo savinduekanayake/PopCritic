@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from '@material-ui/core/styles';
+import {withStyles, makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import { shadows } from '@material-ui/system';
 import Rating from '@material-ui/lab/Rating';
 import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -47,12 +48,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+
 function postReview(rating,review,type) {
   var id = window.location.pathname.substring(type=="movie"?7:8);
   fetch("https://popcritic.herokuapp.com/"+type+"/"+id+"/reviews",{method: "POST", body: JSON.stringify({ rating, review }), headers: {'Content-Type': "application/json", token: window.localStorage.getItem("token")}}).then(x=>x.text()).then(function() {
   	window.location.reload();
   }).catch(console.log);
 }
+
+
 
 export default function CreateReview(props) {
   const classes = useStyles();
@@ -66,7 +71,17 @@ export default function CreateReview(props) {
   	<Typography className={classes.heading}>Post Review</Typography>
   	<Rating button value={rating} onChange={ (e,rtg) => setRating(rtg) } className={classes.rating} />
   	<TextareaAutosize disabled={!isLoggedIn} value={review} onChange={ (e) => setReview(e.target.value) } maxLength={300} className={classes.reviewBox} boxShadow={3} rowsMin={6} placeholder={isLoggedIn?"Write Your Review Here ...":"Please Log In to Write Your Review Here ..."} />
-  	<Button onClick={ () => postReview(rating,review,props.type) } className={classes.postButton} classes={{ disabled: classes.disabledButton }} disabled={!review.length>0}>Post Review</Button>
-  	</div>
+	 
+	 {isLoggedIn? 
+	<Button onClick={ () => postReview(rating,review,props.type) } classes={{ disabled: classes.disabledButton }} className={classes.postButton} >Post Review</Button>
+
+	:
+	<Button onClick={ () => postReview(rating,review,props.type) }classes={{ disabled: classes.disabledButton }} disabled={true}>Post Review</Button>
+	
+	}
+	 {/* <Button onClick={ () => postReview(rating,review,props.type) } className={classes.postButton} classes={{ disabled: classes.disabledButton }} disabled={!review.length>0}>Post Review</Button> */}
+	 
+	 
+	  </div>
   )
 }
