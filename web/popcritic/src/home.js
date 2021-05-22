@@ -90,17 +90,12 @@ export default function Home() {
           { movie.title}
           </Typography>
           </Link>
-          
+
           <Typography variant="body2" component="p" className={classes.plot}>
           {  movie.plot.slice(0,70) + "..." }
           </Typography>
-          <Rating  readOnly value={Math.floor(Math.random() * 3) + 3} />
-        </CardContent>
-
-        {/* <dev className={classes.rate}>
-        <Rating  readOnly value={Math.floor(Math.random() * 3) + 3} />
-        </dev> */}
-        
+          <Rating  readOnly value={movie.movie_id %3 + 3} />
+        </CardContent>   
     </Card>
    ):""}
    </div>
