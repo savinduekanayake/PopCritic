@@ -109,9 +109,15 @@ export default function SearchAppBar() {
           <Link href="/">
           <Avatar alt="PopCritic" src="/header.png" className={classes.avatar} />
           </Link>
+    
+        <Link color="inherit" href="/" underline="none">
           <Typography className={classes.title} variant="h6" noWrap>
             PopCritic
           </Typography>
+          </Link>
+
+
+ 
           <Link href="https://github.com/theabbie/PopCritic">
             <GitHubIcon fontSize="large" className={classes.gh} />
           </Link>
