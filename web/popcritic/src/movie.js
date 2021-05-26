@@ -10,6 +10,7 @@ import Link from '@material-ui/core/Link';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import CreateReview from './createReview';
 import ReviewList from './reviewList';
@@ -98,7 +99,11 @@ export default function Movie() {
       <Box p={1}>
         <Typography variant="h4" gutterBottom className={classes.title}>Cast:</Typography>
         <List className={classes.list}>
-          {movie?movie.cast.map(p=>(<Link href={"/people/"+p.people_id}><img className={classes.people} src={"https://image.tmdb.org/t/p/w500"+p.image} /></Link>)):""}
+          {movie?movie.cast.map(p=>(<Link href={"/people/"+p.people_id}>
+            <Tooltip title={p.name}>
+            <img className={classes.people} src={"https://image.tmdb.org/t/p/w500"+p.image} />
+            </Tooltip>
+            </Link>)):""}
         </List>
       </Box>
     </Box>

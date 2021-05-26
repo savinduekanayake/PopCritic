@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   bar: {
-    background: 'rgb(30,30,30)'
+    background: 'rgb(30,30,30)',
+    minHeight:90,
+    justifyContent: 'center'
   },
   title: {
     flexGrow: 1,

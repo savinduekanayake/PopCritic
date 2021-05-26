@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
   list: {
   	background: '#121212',
     color: 'white',
-    margin: 30
+    marginTop: 30,
+    marginLeft: 40
   },
   heading: {
   	fontSize: 30,
@@ -63,7 +64,7 @@ export default function Search() {
   	<Helmet>
     <title>{ "Search Results For " + query }</title>
     </Helmet>
-    <Typography className={classes.heading}>{ "Search Results For " + query }</Typography>
+    <Typography className={classes.heading}>{ "Search Results:  " + query }</Typography> 
   	<CircularProgress style={{ display: movies?"none":"block", margin: "20px auto" }} />
     <List component="nav" className={classes.list} aria-label="mailbox folders">
     { movies?movies.map(x=> (
