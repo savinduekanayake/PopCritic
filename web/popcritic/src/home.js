@@ -81,7 +81,7 @@ export default function Home() {
    <div className={classes.container}>
    <CircularProgress style={{ display: movies?"none":"block", margin: "20px auto" }} />
    { movies?movies.map(movie =>
-    <Card className={windowWidth >500? classes.card : classes.cardMobile} key={movie.movie_id}>
+    <Card className={windowWidth >500? classes.card : classes.cardMobile} key={movie.movie_id} >
         <CardMedia className={classes.media} image={ "https://image.tmdb.org/t/p/w500" + movie.poster } title={ movie.title } />
         <CardContent>
 

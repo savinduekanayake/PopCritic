@@ -91,8 +91,8 @@ export default function Movie() {
           <Typography variant="subtitle1" gutterBottom className={classes.plot}>{ movie?movie.plot:"" }</Typography>
           <Typography variant="h5" gutterBottom className={classes.title}>Cast:</Typography>
           <Typography variant="subtitle1" gutterBottom className={classes.title}>{ movie?movie.cast.map(x=><Link href={"/people/"+x.people_id} className={classes.link}>{x.name}</Link>):"" }</Typography>
-          <Button disabled={!(movie && movie.imdb_id)} variant="contained" href={"https://imdb.com/title/"+movie?movie.imdb_id:""} className={classes.button}>IMDB</Button>
-        </Box>
+          <Button disabled={!(movie && movie.imdb_id)} className={classes.button} variant="contained" href = {"https://www.imdb.com/title/"+movie.imdb_id+""}>IMDB</Button>
+        </Box> 
   	</Box>
     <Box display="flex" className={classes.box} justifyContent="flex-start" m={1} p={1}>
       <Box p={1}>
