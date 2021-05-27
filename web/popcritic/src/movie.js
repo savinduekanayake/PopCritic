@@ -11,6 +11,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Tooltip from '@material-ui/core/Tooltip';
+import ArrowBackSharpIcon from '@material-ui/icons/ArrowBackSharp';
 
 import CreateReview from './createReview';
 import ReviewList from './reviewList';
@@ -83,8 +84,10 @@ export default function Movie() {
     </Helmet>
 
   	<CircularProgress style={{ display: movie?"none":"block", margin: "20px auto" }} />
-    
   	<Box display="flex" className={classes.box} justifyContent="flex-start" m={1} p={1}>
+    <Link href="/">
+      <ArrowBackSharpIcon  style={{fill: "gold"}}  fontSize="large" />
+    </Link>
     	<Box p={1}>
           <img className={classes.poster} src={ movie?("https://image.tmdb.org/t/p/w500"+movie.poster):"https://via.placeholder.com/400x600" } />
         </Box>

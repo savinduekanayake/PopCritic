@@ -12,6 +12,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 
+
 const useStyles = makeStyles((theme) => ({
   header: {
     flexGrow: 1,
@@ -92,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   titleDev: {
     flex:1,
 
-  }
+  },
 }));
 
 export default function SearchAppBar() {
@@ -112,6 +113,7 @@ export default function SearchAppBar() {
     <div className={classes.header}>
       <AppBar position="static" className={classes.bar}>
         <Toolbar>
+        
           <Link href="/">
           <Avatar alt="PopCritic" src="/header.png" className={classes.avatar} />
           </Link>
@@ -127,14 +129,14 @@ export default function SearchAppBar() {
           </dev>
 
  
-          <Link href="https://github.com/savinduekanayake/PopCritic">
+          <Link aria-label="Github link" href="https://github.com/savinduekanayake/PopCritic">
             <GitHubIcon fontSize="large" className={classes.gh} />
           </Link>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
             <SearchIcon />
             </div>
-            
+
             <InputBase
               placeholder="Search Movie"
               classes={{
