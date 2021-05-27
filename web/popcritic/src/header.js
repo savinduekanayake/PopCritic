@@ -134,6 +134,7 @@ export default function SearchAppBar() {
             <div className={classes.searchIcon}>
             <SearchIcon />
             </div>
+            
             <InputBase
               placeholder="Search Movie"
               classes={{

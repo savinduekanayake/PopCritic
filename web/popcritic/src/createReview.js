@@ -70,8 +70,16 @@ export default function CreateReview(props) {
     { window.localStorage.setItem("review",review) }
   	<Typography className={classes.heading}>Post Review</Typography>
   	<Rating button value={rating} onChange={ (e,rtg) => setRating(rtg) } className={classes.rating} />
-  	<TextareaAutosize disabled={!isLoggedIn} value={review} onChange={ (e) => setReview(e.target.value) } maxLength={300} className={classes.reviewBox} boxShadow={3} rowsMin={6} columnsMin={3} placeholder={isLoggedIn?"Write Your Review Here ...":"Please Log In to Write Your Review Here ..."} />
-	 
+
+	  {!isLoggedIn? 
+	  <TextareaAutosize 
+	  aria-label = "Posting review is disabled. Please login and write your review about movie." aria-required = {true}
+	  disabled={!isLoggedIn} value={review} onChange={ (e) => setReview(e.target.value) } maxLength={300} className={classes.reviewBox} boxShadow={3} rowsMin={6} columnsMin={3} placeholder={isLoggedIn?"Write Your Review Here ...":"Please Log In to Write Your Review Here ..."} />
+		:
+	  <TextareaAutosize 
+	  aria-label = "Write your review about movie" aria-required = {true}
+	  disabled={!isLoggedIn} value={review} onChange={ (e) => setReview(e.target.value) } maxLength={300} className={classes.reviewBox} boxShadow={3} rowsMin={6} columnsMin={3} placeholder={isLoggedIn?"Write Your Review Here ...":"Please Log In to Write Your Review Here ..."} />
+	  }
 	 {isLoggedIn? 
 	<Button onClick={ () => postReview(rating,review,props.type) } classes={{ disabled: classes.disabledButton }} className={classes.postButton} >Post Review</Button>
 

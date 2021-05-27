@@ -74,8 +74,9 @@ export default function Movie() {
   return (
   	<div>
   	<Helmet>
-    <title>{ people?(people.name+" | PopCritic"):"PopCritic - Movies Reviewed by people, for people" }</title>
+      <title>{ people?(people.name+" | PopCritic"):"PopCritic - Movies Reviewed by people, This is " + people.name + " profile"  }</title>
     </Helmet>
+    
   	<CircularProgress style={{ display: people?"none":"block", margin: "20px auto" }} />
   	<Box display="flex" className={classes.box} justifyContent="flex-start" m={1} p={1}>
     	<Box p={1}>

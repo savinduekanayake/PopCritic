@@ -62,8 +62,9 @@ export default function Search() {
   return (
   	<div>
   	<Helmet>
-    <title>{ "Search Results For " + query }</title>
+      <title>{ "Search Results For " + query }</title>
     </Helmet>
+    
     <Typography className={classes.heading}>{ "Search Results:  " + query }</Typography> 
   	<CircularProgress style={{ display: movies?"none":"block", margin: "20px auto" }} />
     <List component="nav" className={classes.list} aria-label="mailbox folders">
