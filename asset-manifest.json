@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/PopCritic/static/css/main.ce62c8d8.chunk.css",
+    "main.js": "/PopCritic/static/js/main.6d78b8af.chunk.js",
+    "main.js.map": "/PopCritic/static/js/main.6d78b8af.chunk.js.map",
+    "runtime-main.js": "/PopCritic/static/js/runtime-main.5ed18c9b.js",
+    "runtime-main.js.map": "/PopCritic/static/js/runtime-main.5ed18c9b.js.map",
+    "static/js/2.74137a19.chunk.js": "/PopCritic/static/js/2.74137a19.chunk.js",
+    "static/js/2.74137a19.chunk.js.map": "/PopCritic/static/js/2.74137a19.chunk.js.map",
+    "index.html": "/PopCritic/index.html",
+    "static/css/main.ce62c8d8.chunk.css.map": "/PopCritic/static/css/main.ce62c8d8.chunk.css.map",
+    "static/js/2.74137a19.chunk.js.LICENSE.txt": "/PopCritic/static/js/2.74137a19.chunk.js.LICENSE.txt",
+    "static/media/details2.0095b60a.jpg": "/PopCritic/static/media/details2.0095b60a.jpg",
+    "static/media/login.453d06f1.jpg": "/PopCritic/static/media/login.453d06f1.jpg",
+    "static/media/search2.65ed2278.jpg": "/PopCritic/static/media/search2.65ed2278.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ed18c9b.js",
+    "static/js/2.74137a19.chunk.js",
+    "static/css/main.ce62c8d8.chunk.css",
+    "static/js/main.6d78b8af.chunk.js"
+  ]
+}
