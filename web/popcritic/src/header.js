@@ -12,6 +12,8 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 
+import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -147,7 +149,8 @@ export default function SearchAppBar() {
               onKeyDown={search}
             />
           </div>
-          <Button variant="contained" href="/help" className={classes.login}>Get Help</Button>
+          <Button variant="contained" href="/help" className={classes.login}>
+             <HelpOutlineIcon/> <span>&nbsp;</span> Help </Button>
           {
            profile.pic?<Link href="/me"><Avatar alt="PopCritic" src={ profile?profile.pic:"" } className={classes.user} /></Link>:<Button variant="contained" href="https://popcritic.herokuapp.com/login" className={classes.login}>Log In</Button>
           }
