@@ -7,6 +7,7 @@ import Me from './me';
 import Movie from './movie';
 import People from './people';
 import User from './user';
+import Help from './Help';
 
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -52,6 +53,9 @@ export default function App() {
           </Route>
           <Route path="/me">
             <Me />
+          </Route>
+          <Route path="/help">
+            <Help />
           </Route>
           <Route path="/login">
             <Snackbar open={message} autoHideDuration={1000} onClose={ saveLogin }>

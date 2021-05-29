@@ -82,20 +82,27 @@ export default function Home() {
    <CircularProgress style={{ display: movies?"none":"block", margin: "20px auto" }} />
    { movies?movies.map(movie =>
     <Card className={windowWidth >500? classes.card : classes.cardMobile} key={movie.movie_id} >
+      {/* <div style={{backgroundColor: 'red', flex :1, minHeight:200}}> */}
         <CardMedia className={classes.media} image={ "https://image.tmdb.org/t/p/w500" + movie.poster } title={ movie.title } />
-        <CardContent>
-
+        <CardContent style={{padding: 10}}>
+        <div style={{minHeight:169, maxHeight:220}}>
           <Link href={ "/movie/" + movie.movie_id } color="inherit" style={{ textDecoration: "none" }}>
           <Typography className={classes.title} gutterBottom variant="h5" component="h2">
-          { movie.title}
+          
+          { movie.title.split(":")}
           </Typography>
           </Link>
-
+          
           <Typography variant="body2" component="p" className={classes.plot}>
           {  movie.plot.slice(0,70) + "..." }
           </Typography>
-          <Rating  readOnly value={movie.movie_id %3 + 3} />
+        </div>
+          {/* <Rating  readOnly value={movie.movie_id %3 + 3} /> */}
         </CardContent>   
+        {/* </div> */}
+       
+        <Rating  readOnly value={movie.movie_id %3 + 3} />
+      
     </Card>
    ):""}
    </div>
