@@ -102,7 +102,7 @@ export default function Home() {
         {/* </div> */}
        
         <Rating  readOnly value={movie.movie_id %3 + 3} />
-      
+       
     </Card>
    ):""}
    </div>
