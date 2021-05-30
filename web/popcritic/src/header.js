@@ -15,6 +15,8 @@ import Link from '@material-ui/core/Link';
 import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
+import headerImage from './assets/images/header.png'
+
 const useStyles = makeStyles((theme) => ({
   header: {
     flexGrow: 1,
@@ -117,7 +119,7 @@ export default function SearchAppBar() {
         <Toolbar>
         
           <Link href="/">
-          <Avatar alt="PopCritic" src="/header.png" className={classes.avatar} />
+          <Avatar alt="PopCritic" src={headerImage} className={classes.avatar} />
           </Link>
     
         <dev className={classes.titleDev}>

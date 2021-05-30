@@ -14,6 +14,8 @@ import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 import { Redirect } from 'react-router';
 
+import image404 from './assets/images/404.gif'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -75,7 +77,7 @@ export default function App() {
             <User />
           </Route>
           <Route path="*">
-            <img src="/404.gif" className={classes.notFound} />
+            <img src={image404} className={classes.notFound} />
           </Route>
         </Switch>
     	</Router>
