@@ -33,11 +33,3 @@ Go to `popcritic` and run,
 npm install
 npm run start
 ```
-
-## Team of original website
-
-* [Aditya Unnikrishnan](https://github.com/CharieBlastX7)
-* [Gabriel Rajendran](https://github.com/rgab1508)
-* [Abhishek Chaudhary](https://theabbie.github.io/)
-* [Gregory](https://github.com/gregbg218)
-
