@@ -6,6 +6,8 @@
 
 PopCritic is a movie review website which is focussed on various aspects of films and help people find the best film to watch next.
 
+* This is a modified version of the original website.
+
 [popcritic.web.app](https://popcritic.web.app)
 
 ## Overview
