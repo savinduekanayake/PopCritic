@@ -6,9 +6,11 @@
 
 PopCritic is a movie review website which is focussed on various aspects of films and help people find the best film to watch next.
 
-* This is a modified version of the original website. Which is available at [popcritic.web.app](https://popcritic.web.app)
+* This is a modified version of the original website. This modified version is published at [popcritic-modified.herokuapp.com](https://popcritic-modified.herokuapp.com/)
 
-## Overview
+* The original website is available at [popcritic.web.app](https://popcritic.web.app)
+
+## Overview of ORIGINAL Website
 
 ![PopCritic Desktop](https://raw.githubusercontent.com/theabbie/PopCritic/master/Images/desktop.JPG)
 
