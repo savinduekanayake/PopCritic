@@ -27,7 +27,7 @@ PopCritic is a movie review website which is focussed on various aspects of film
 
 ## Try Locally
 
-Go to `web/popcritic` and run,
+Go to `popcritic` and run,
 
 ```sh
 npm install
@@ -41,10 +41,3 @@ npm run start
 * [Abhishek Chaudhary](https://theabbie.github.io/)
 * [Gregory](https://github.com/gregbg218)
 
-## Contributing
-
-Thank you for your interest in contributing, Check out [CONTRIBUTING.md](/CONTRIBUTING.md) for details.
-
-## License
-
-This project is licensed under MIT License, See [LICENSE](/LICENSE) for more information.
