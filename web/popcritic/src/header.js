@@ -20,6 +20,9 @@ import headerImage from './assets/images/header.png'
 const useStyles = makeStyles((theme) => ({
   header: {
     flexGrow: 1,
+    position: 'fixed',
+    zIndex: 10,
+    width:'100%'
   },
   bar: {
     background: 'rgb(30,30,30)',
@@ -154,7 +157,7 @@ export default function SearchAppBar() {
           <Button variant="contained" href="/help" className={classes.login}>
              <HelpOutlineIcon/> <span>&nbsp;</span> Help </Button>
           {
-           profile.pic?<Link href="/me"><Avatar alt="PopCritic" src={ profile?profile.pic:"" } className={classes.user} /></Link>:<Button variant="contained" href="https://popcritic.herokuapp.com/login" className={classes.login}>Log In</Button>
+           profile.pic?<Link href="/me"><Avatar alt="PopCritic" src={ profile?profile.pic:"" } className={classes.user} /></Link>:<Button variant="contained" href="https://popcritic-modified.herokuapp.com/login" className={classes.login}>Log In</Button>
           }
         </Toolbar>
       </AppBar>

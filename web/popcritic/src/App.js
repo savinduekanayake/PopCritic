@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     top: "50%",
     transform: "translate(-50%,-50%)"
+  },
+  header: {
+    // marginTop:50,
+    paddingTop:100
   }
 }));
 
@@ -48,9 +52,13 @@ export default function App() {
   return (
     	<div>
     	<SearchAppBar />
+      <div className={classes.header}></div>
     	<Router>
     	<Switch>
           <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/PopCritic">
             <Home />
           </Route>
           <Route path="/me">

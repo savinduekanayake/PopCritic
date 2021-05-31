@@ -64,7 +64,7 @@ export default function Search() {
   	<Helmet>
       <title>{ "Search Results For " + query }</title>
     </Helmet>
-    
+
     <Typography className={classes.heading}>{ "Search Results:  " + query }</Typography> 
   	<CircularProgress style={{ display: movies?"none":"block", margin: "20px auto" }} />
     <List component="nav" className={classes.list} aria-label="mailbox folders">
@@ -75,7 +75,7 @@ export default function Search() {
         <img src={ x.poster_path?("https://image.tmdb.org/t/p/w500"+x.poster_path):"https://via.placeholder.com/400x600" } className={classes.poster} />
         
         <Typography className={classes.title}>{ x.original_title }</Typography>
-        <Typography className={classes.date}>({ x.release_date?x.release_date.split("-")[0]:"" })</Typography>
+        <Typography className={classes.date}>{ x.release_date?(x.release_date.split("-")[0]):"" }</Typography>
         
       </ListItem>
       </Link>
